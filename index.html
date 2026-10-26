@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Touch Calculator: talking calculator for blind users</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="top">
+      <button id="help" type="button" class="small">Hear instructions</button>
+      <button id="slower" type="button" class="small" aria-label="Speak slower">Slower</button>
+      <button id="faster" type="button" class="small" aria-label="Speak faster">Faster</button>
+    </div>
+
+    <p id="status" aria-hidden="true">Tap a key to hear it. Tap it again to type it.</p>
+    <div class="screen">
+      <div id="expr" aria-hidden="true">&nbsp;</div>
+      <output id="out" aria-label="Display">0</output>
+    </div>
+
+    <form id="sumForm">
+      <label for="sumInput" class="sr">Type a sum for guided mode, for example 12 plus 3</label>
+      <input id="sumInput" type="text" placeholder="Say or type: 12 plus 3" autocomplete="off">
+      <button id="mic" type="button" class="small">Speak a sum</button>
+    </form>
+
+    <div id="grid" role="group" aria-label="Calculator keys"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
